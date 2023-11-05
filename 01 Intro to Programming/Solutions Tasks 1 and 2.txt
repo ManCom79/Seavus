@@ -1,0 +1,38 @@
+Homework Task 1: Write an algorithm to determine a student’s final grade and indicate whether it is passing or failing The final grade is calculated as the average of four marks (Math, Science, History, English). The grade can be a number between 1 and 5 and the student should have at least 3 as an average grade to pass.
+
+Solution Homework Task 1:
+
+BEGIN
+NUMBER math, science, history, english, average
+OUTPUT ("Inputh grade for math: ")
+INPUT math
+OUTPUT ("Inputh grade for science: ")
+INPUT science
+OUTPUT ("Inputh grade for history: ")
+INPUT history
+OUTPUT ("Inputh grade for english: ")
+INPUT english
+average = (math + science + history + english)/4
+IF average < 3
+	OUTPUT("Unfortunately you have not passed the grade level.")
+ELSE
+	OUTPUT("Congratulations, you have passed the grade level!")
+END
+
+
+Homework Task 2: Write an algorithm to determine the result of the multiplication of two numbers by ONLY using the + (addition) operator.  Let's say we have two numbers (7 and 5) and we want to get the result of their multiplication but we are not allowed to use * operator but only the + operator.
+
+Solution Homework Task 2:
+
+BEGIN
+NUMBER multiplicand, multiplicator,  product
+OUTPUT ("Input multiplicand: ")
+INPUT multiplicand
+OUTPUT ("Inputh multiplicator: ")
+INPUT multiplicator
+i = 0
+product = multiplicand
+WHILE i < multiplicator
+	product = product + multiplicand
+	i++
+OUTPUT("The product is: ", product)

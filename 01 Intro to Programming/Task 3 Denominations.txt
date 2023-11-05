@@ -1,0 +1,19 @@
+array = [1, 5, 10, 20, 50]
+arrayDesc = array.orderDecending // [50, 20, 10, 5, 1]
+
+var counter
+var remainder 
+var givenTotalQuantity
+
+function denominator (givenTotalQuantity)
+	for(i = 0; i < arrayDesc.length; i++)
+		if arrayDesc[i] != 1
+			remainder = givenTotalQuantity % arrayDesc[i]    //ostatok
+			counter = (givenTotalQuantity - remainder)/arrayDesc[i]  //kolku moneti so vrednost arrayDesc[i]
+			giventTotalQuantity = givenTotalQuantity - (counter * arrayDesc[i])
+			totalCounter = totalCounter + counter
+			print(Vkupno counter moneti od arrayDesc[i] denari,)
+		else
+			totalCounter = totalCounter + counter
+			print(Vkupno givenTotalQuantity moneti od arrayDesc[i] denar)
+	print(Potrebni se vkupno totalCounter moneti.)
