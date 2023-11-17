@@ -1,0 +1,69 @@
+.frame-box {
+    background-color: black;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+}
+
+.red {
+    background-color: rgb(236, 73, 56);
+    width: 445px;
+    height: 445px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.blue {
+    background-color: rgb(64, 156, 197);
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.bright-1 {
+    background-color: #fef9e6;
+    width: 130px;
+    height: 190px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.bright-2 {
+    background-color: #fef9e6;
+    width: 130px;
+    height: 230px;
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+.bright-3 {
+    background-color: #fef9e6;
+    width: 415px;
+    height: 130px;
+    position: absolute;
+    bottom: 5px;
+    left: 150px;
+}
+
+.bright-4 {
+    background-color: #fef9e6;
+    width: 15px;
+    height: 55px;
+    position: absolute;
+    top: 465px;
+    right: 5px;
+}
+
+.yellow {
+    background-color: #ffff00;
+    width: 15px;
+    height: 55px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
