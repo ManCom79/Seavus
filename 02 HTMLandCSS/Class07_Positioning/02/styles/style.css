@@ -1,0 +1,169 @@
+.frame {
+    background-color: black;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    margin: auto;
+}
+
+.box-1 {
+    background-color: #e5eeeb;
+    width: 145px;
+    height: 58px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.box-2 {
+    background-color: #f2e7d5;
+    width: 215px;
+    height: 58px;
+    position: absolute;
+    top: 0px;
+    left: 155px;
+}
+
+.box-3 {
+    background-color: #f2c968;
+    width: 170px;
+    height: 58px;
+    position: absolute;
+    top: 0px;
+    left: 380px;
+}
+
+.box-4 {
+    background-color: #f2e7d5;
+    width: 68px;
+    height: 143px;
+    position: absolute;
+    top: 68px;
+    left: 0px;
+}
+
+.box-5 {
+    background-color: red;
+    width: 290px;
+    height: 298px;
+    position: absolute;
+    top: 68px;
+    left: 80px;
+}
+
+.box-6 {
+    background-color: #e5eeeb;
+    width: 68px;
+    height: 220px;
+    position: absolute;
+    top: 221px;
+    left: 0px;
+}
+
+.box-7 {
+    background-color: #f2c968;
+    width: 170px;
+    height: 142px;
+    position: absolute;
+    top: 68px;
+    left: 380px;
+}
+
+.box-8 {
+    background-color: #dfe5d0;
+    width: 80px;
+    height: 146px;
+    position: absolute;
+    top: 220px;
+    left: 380px;
+}
+
+.box-9 {
+    background-color: #f2eee2;
+    width: 80px;
+    height: 146px;
+    position: absolute;
+    top: 220px;
+    left: 470px;
+}
+
+.box-10 {
+    background-color: #f4c65a;
+    width: 68px;
+    height: 149px;
+    position: absolute;
+    top: 451px;
+    left: 0px;
+}
+
+.box-11 {
+    background-color: #c0bfba;
+    width: 140px;
+    height: 65px;
+    position: absolute;
+    top: 376px;
+    left: 230px;
+}
+
+.box-12 {
+    background-color: #d6dee0;
+    width: 170px;
+    height: 65px;
+    position: absolute;
+    top: 376px;
+    left: 380px;
+}
+
+.box-13 {
+    background-color: #fcfde7;
+    width: 42px;
+    height: 441px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.box-14 {
+    background-color: red;
+    width: 42px;
+    height: 149px;
+    position: absolute;
+    top: 451px;
+    right: 0px;
+}
+
+.box-15 {
+    background-color: #e3ded9;
+    width: 140px;
+    height: 72px;
+    position: absolute;
+    bottom: 0px;
+    left: 78px;
+}
+
+.box-16 {
+    background-color: #e3ded9;
+    width: 140px;
+    height: 62px;
+    position: absolute;
+    bottom: 87px;
+    left: 230px;
+}
+
+.box-17 {
+    background-color: #e0e0df;
+    width: 322px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 228px;
+}
+
+.box-18 {
+    background-color: #241785;
+    width: 170px;
+    height: 119px;
+    position: absolute;
+    top: 451px;
+    left: 380px;
+}
