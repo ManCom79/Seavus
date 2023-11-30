@@ -26,8 +26,10 @@
 }
 
 .box-4 {
+    display: flex;
     background-color: #dd4838;
-    ;
+    align-items: center;
+    justify-content: center;
 }
 
 /* container that will contain all three divs in it */
@@ -65,6 +67,35 @@
     position: absolute;
     background-color: #fffefc;
     animation: extendbox2 10s ease-in-out forwards infinite;
+}
+
+.outcontainer-box4 {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
+
+.extend-box4 {
+    margin-top: 15px;
+    margin-left: 15px;
+    position: absolute;
+    background-color: #fffefc;
+    animation: extendbox4 10s ease-in-out forwards infinite;
+}
+
+#circle {
+    width: 11px;
+    height: 11px;
+    border-radius: 5.5px;
+    background-color: #fffefc;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    animation: move-arround 2.5s ease-in forwards infinite;
+}
+
+.bck {
+    background-color: #e36d61;
 }
 
 @keyframes extendbox1 {
@@ -121,4 +152,40 @@
         height: 22px;
         opacity: 0;
     }
+}
+
+@keyframes extendbox4 {
+    0% {
+        width: 0px;
+        height: 40px;
+        opacity: 0;
+
+    }
+
+    10% {
+        width: 0px;
+        height: 40px;
+        opacity: 1;
+
+    }
+
+    70% {
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+    }
+}
+
+@keyframes move-arround {
+    0%   {top: 0px; right: 0px;}
+    25%  {top: 59px; right: 0px;}
+    50%  {top: 59px; right: 59px;}
+    75%  {top: 0px; right: 59px;}
+    100% {top: 0px; right: 0px;}
 }
