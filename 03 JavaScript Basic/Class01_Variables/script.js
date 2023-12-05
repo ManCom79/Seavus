@@ -8,7 +8,7 @@ let totalPrice = (phonePrice + (phonePrice * (taxRate/100))) * numberOfPhones
 console.log('Total price for', numberOfPhones, 'phones including', taxRate, '% taxrate is', totalPrice, '.')
 console.log("---------------------------------------------------")
 
-//Attempt 2
+//Attempt 2: Calculating Total Price of Phones
 function cellPhones (cellUnitPrice, cellUnutTax, cellUnitCount) {
     let totalCellCountPrice = (cellUnitPrice + (cellUnitPrice * (cellUnutTax/100))) * cellUnitCount
     return "Total price for " + cellUnitCount + ' phones including ' + cellUnutTax + '% taxrate is ' + totalCellCountPrice + '.'
