@@ -27,10 +27,8 @@ console.log("---------------------------------------------------")
 
 //Increment by 1
 
-let yourNumber = 30;
-
-let incremented = yourNumber + 1;
-console.log(yourNumber, 'incremented by 1 is', incremented,'.')
+let yourNumber = 10;
+console.log(yourNumber, 'incremented by 1 is', ++yourNumber,'.')
 console.log("---------------------------------------------------")
 
 //Area of Triangle
