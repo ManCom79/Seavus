@@ -67,10 +67,29 @@ if (numberToCheck > 0) {
     console.log(numberToCheck, 'is zero.')
 }
 
+// Task 4: Write a program that will accept user input between 1-7 (week number) and print week day.
+
+let numOfDayInWeek = prompt('Enter the numerical order of a day in week (in range of 1 to 7): ')
+
+if (numOfDayInWeek == 1) {
+    console.log('Monday')
+} else if (numOfDayInWeek == 2) {
+    console.log('Tuesday')
+} else if (numOfDayInWeek == 3) {
+    console.log('Wednesday')
+} else if (numOfDayInWeek == 4) {
+    console.log('Thursday')
+} else if (numOfDayInWeek == 5) {
+    console.log('Friday')
+} else if (numOfDayInWeek == 6) {
+    console.log('Saturday')
+} else if (numOfDayInWeek == 7) {
+    console.log('Sunday')
+}
 
 
 
 
-// Write a program that will accept user input between 1-7 (week number) and print week day.
+
 // Write a program that will check if user typed an input that is a number or not
 // Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following: Percentage >= 90% : Grade A Percentage >= 80% : Grade B Percentage >= 70% : Grade C Percentage >= 60% : Grade D Percentage >= 40% : Grade E Percentage < 40% : Grade F
