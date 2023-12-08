@@ -98,6 +98,32 @@ if (isNaN(parsedCheckIfNumber) == true) {
     console.log('The input is a number!')
 }
 
+// Task 6: Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following: Percentage >= 90% : Grade A Percentage >= 80% : Grade B Percentage >= 70% : Grade C Percentage >= 60% : Grade D Percentage >= 40% : Grade E Percentage < 40% : Grade F
 
+let physicsMark = prompt('Enter Physics achieved percentage:')
+physics = parseFloat(physicsMark)
+let chemistryMark = prompt('Enter Chemistry achieved percentage:')
+chemistry = parseFloat(chemistryMark)
+let biologyMark = prompt('Enter Biology achieved percentage:')
+biology = parseFloat(biologyMark)
+let mathMark = prompt('Enter Mathematics achieved percentage:')
+maths = parseFloat(mathMark)
+let csMark = prompt('Enter Computer Science achieved percentage:')
+cs = parseFloat(csMark)
 
-// Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following: Percentage >= 90% : Grade A Percentage >= 80% : Grade B Percentage >= 70% : Grade C Percentage >= 60% : Grade D Percentage >= 40% : Grade E Percentage < 40% : Grade F
+scorePercentage = ((physics + chemistry + biology + maths + cs)/5)
+console.log('You\'r average score in percentage is', scorePercentage, '%.')
+
+if (scorePercentage >= 90) {
+    console.log('Grade A')
+} else if (scorePercentage >= 80) {
+    console.log('Grade B')
+} else if (scorePercentage >= 70) {
+    console.log('Grade C')
+} else if (scorePercentage >= 60) {
+    console.log('Grade D')
+} else if (90 <= scorePercentage >= 100) {
+    console.log('Grade E')
+} else {
+    console.log('Grade F')
+}
