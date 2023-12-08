@@ -1,4 +1,4 @@
-// Task 1. Write a program to find maximum between two numbers.
+// Task 1: Write a program to find maximum between two numbers.
 
 let firstNumber = prompt("Enter the first number:")
 let firstNumberParsed = parseFloat(firstNumber)
@@ -35,8 +35,42 @@ if (firstNumber > secondNumber) {
     console.log('The entered numbers are equal.')
 }
 
-// Write a program to find maximum between three numbers.
-// Write a program to check whether a number is negative, positive or zero.
+// Task 2: Write a program to find maximum between three numbers. (the program does not check if the input contains equal numbers)
+
+let numOne = prompt('Enter the first of the three numbers to compare:')
+let numTwo = prompt('Enter the second of the three numbers to compare:')
+let numThree = prompt('Enter the third of the three numbers to compare:')
+
+if (numOne > numTwo) {
+    if (numOne > numThree) {
+        console.log(numOne, 'is the largest number among', numOne,',', numTwo,'and', numThree, '.')
+    } else {
+        console.log(numThree, 'is the largest number among', numOne,',', numTwo,'and', numThree, '.')   
+    }
+} else if (numTwo > numOne) {
+    if (numTwo > numThree) {
+        console.log(numTwo, 'is the largest number among', numOne,',', numTwo,'and', numThree, '.')
+    } else {
+        console.log(numThree, 'is the largest number among', numOne,',', numTwo,'and', numThree, '.')   
+    }
+}
+
+// Task 3: Write a program to check whether a number is negative, positive or zero.
+
+let numberToCheck = prompt('Enter number to check if positive, negative or zero:')
+
+if (numberToCheck > 0) {
+    console.log(numberToCheck, 'is a positive number.')
+} else if (numberToCheck < 0) {
+    console.log(numberToCheck, 'is a negative number.')
+} else {
+    console.log(numberToCheck, 'is zero.')
+}
+
+
+
+
+
 // Write a program that will accept user input between 1-7 (week number) and print week day.
 // Write a program that will check if user typed an input that is a number or not
 // Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following: Percentage >= 90% : Grade A Percentage >= 80% : Grade B Percentage >= 70% : Grade C Percentage >= 60% : Grade D Percentage >= 40% : Grade E Percentage < 40% : Grade F
