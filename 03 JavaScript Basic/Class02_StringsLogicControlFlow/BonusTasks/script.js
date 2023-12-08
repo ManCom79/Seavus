@@ -87,9 +87,17 @@ if (numOfDayInWeek == 1) {
     console.log('Sunday')
 }
 
+// Task 5: Write a program that will check if user typed an input that is a number or not
+
+let checkIfNumber = prompt('Make an input to check if it\'s a numer:')
+let parsedCheckIfNumber = parseFloat(checkIfNumber)
+
+if (isNaN(parsedCheckIfNumber) == true) {
+    console.log('The input is not a number!')
+} else {
+    console.log('The input is a number!')
+}
 
 
 
-
-// Write a program that will check if user typed an input that is a number or not
 // Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following: Percentage >= 90% : Grade A Percentage >= 80% : Grade B Percentage >= 70% : Grade C Percentage >= 60% : Grade D Percentage >= 40% : Grade E Percentage < 40% : Grade F
