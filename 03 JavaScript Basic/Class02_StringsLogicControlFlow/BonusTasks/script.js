@@ -5,26 +5,26 @@ let firstNumberParsed = parseFloat(firstNumber)
 console.log(firstNumber)
 
 
-if (isNaN(firstNumberParsed) == true) {
+if (isNaN(firstNumberParsed) === true) {
     do {
         firstNumber = prompt("The entered value was not of type number. Please enter a numerical value:")
         firstNumberParsed = parseFloat(firstNumber)
         console.log(firstNumberParsed)
     }
-    while (isNaN(firstNumberParsed) == true)
+    while (isNaN(firstNumberParsed) === true)
 }
 
 let secondNumber = prompt("Enter the second number:")
 let secondNumberParsed = parseFloat(secondNumber)
 console.log(secondNumber)
 
-if (isNaN(secondNumberParsed) == true) {
+if (isNaN(secondNumberParsed) === true) {
     do {
         secondNumber = prompt("The entered value was not of type number. Please enter a numerical value:")
         secondNumberParsed = parseFloat(secondNumber)
         console.log(secondNumberParsed)
     }
-    while (isNaN(secondNumberParsed) == true)
+    while (isNaN(secondNumberParsed) === true)
 }
 
 if (firstNumber > secondNumber) {
@@ -71,19 +71,19 @@ if (numberToCheck > 0) {
 
 let numOfDayInWeek = prompt('Enter the numerical order of a day in week (in range of 1 to 7): ')
 
-if (numOfDayInWeek == 1) {
+if (numOfDayInWeek === 1) {
     console.log('Monday')
-} else if (numOfDayInWeek == 2) {
+} else if (numOfDayInWeek === 2) {
     console.log('Tuesday')
-} else if (numOfDayInWeek == 3) {
+} else if (numOfDayInWeek === 3) {
     console.log('Wednesday')
-} else if (numOfDayInWeek == 4) {
+} else if (numOfDayInWeek === 4) {
     console.log('Thursday')
-} else if (numOfDayInWeek == 5) {
+} else if (numOfDayInWeek === 5) {
     console.log('Friday')
-} else if (numOfDayInWeek == 6) {
+} else if (numOfDayInWeek === 6) {
     console.log('Saturday')
-} else if (numOfDayInWeek == 7) {
+} else if (numOfDayInWeek === 7) {
     console.log('Sunday')
 }
 
@@ -92,7 +92,7 @@ if (numOfDayInWeek == 1) {
 let checkIfNumber = prompt('Make an input to check if it\'s a numer:')
 let parsedCheckIfNumber = parseFloat(checkIfNumber)
 
-if (isNaN(parsedCheckIfNumber) == true) {
+if (isNaN(parsedCheckIfNumber) === true) {
     console.log('The input is not a number!')
 } else {
     console.log('The input is a number!')
