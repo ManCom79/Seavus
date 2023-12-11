@@ -5,17 +5,17 @@
 // Bonus: Make the same function work for converting dog to human years as well
 
 let conversionType = prompt('Type H to convert human years to dog years or D to convert dog years to human years:')
-conversionType.toLocaleLowerCase()
+let hConverted = conversionType.toLocaleLowerCase()
 
 console.log(conversionType)
 
 function yearsConversion () {
-    if(conversionType == 'h') {
+    if(hConverted === 'h') {
         let humanYears = prompt('How many years does the human have?')
         dogYears = humanYears * 7
         console.log(`The ${humanYears} year old human is ${dogYears} years old in dog years.`)
     }
-    else if (conversionType == 'd') {
+    else if (hConverted === 'd') {
         let dogYears = prompt('How many years does the dog have?')
         humanYears = dogYears / 7
         console.log(`The ${dogYears} year old dog is ${humanYears} years old in human years.`)
