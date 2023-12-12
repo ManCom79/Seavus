@@ -5,7 +5,9 @@
 let userInput = prompt("Please enter five numbers, separated by comma.")
 let numbersArray = userInput.split(',')
 let array = [];
+let continueWithSum = true
 
+//Validate the user input
 for (i = 0; i < numbersArray.length; i++) {
     validateNumber(numbersArray[i])
     array.push(numbersArray[i])
@@ -14,24 +16,33 @@ for (i = 0; i < numbersArray.length; i++) {
 function validateNumber(arrayEntry) {
     arrayEntry = parseInt(arrayEntry)
     if (isNaN(arrayEntry)) {
-        return console.log(`Sorry, not all of your entries are numbers. Try again!`)
+        console.log(`Sorry, not all of your entries are numbers. Try again!`)
+        continueWithSum = false
+        return continueWithSum
     }
 }
 
-console.log(array);
+//Validate the array length and sum the numbers
+if (continueWithSum == true) {
+    sumOfNumbersInArray(array)
+}
 
 function sumOfNumbersInArray(anArray) {
-    let sum = 0;
-    for (i = 0; i < anArray.length; i++) {
-        anArray[i] = parseInt(anArray[i])
-        sum = sum + anArray[i]
-    }
-    if (isNaN(sum)) {
-        console.log(`Sorry, some of the inputs in ${anArray} are not numbers`);
+    if (anArray.length != 5) {
+        console.log('Sorry, the program works only if 5 numbers are gievn as input.')
     }
     else {
-        console.log(`Sum is ${sum}`)
+        let sum = 0;
+        for (i = 0; i < anArray.length; i++) {
+            anArray[i] = parseInt(anArray[i])
+            sum = sum + anArray[i]
+        }
+        if (isNaN(sum)) {
+            console.log(`Sorry, some of the inputs in ${anArray} are not numbers`);
+        }
+        else {
+            console.log(`Sum is ${sum}`)
+        }
     }
 }
 
-sumOfNumbersInArray(array)
