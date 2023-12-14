@@ -1,0 +1,15 @@
+table, th, td {
+    border: 1px solid;
+  }
+
+  #table {
+    background-color: blanchedalmond;
+  }
+
+  #recipeName {
+    background-color:burlywood
+  }
+
+  td {
+    background-color:aliceblue
+  }
