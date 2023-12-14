@@ -1,0 +1,25 @@
+#title {
+    background-color: darkcyan;
+}
+
+.listHolder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    background-color: antiquewhite;
+}
+
+#result {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    background-color: antiquewhite;
+}
+
+#calculation {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    background-color: antiquewhite;
+}
+
