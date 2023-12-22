@@ -46,12 +46,21 @@ clearButton.addEventListener("click", function() {
     ClearHtml(container);
 })
 
+
+numOfExcercises.addEventListener("click", function() {
+  alert('Are you sure?')
+  alert('Ok! Just type a number, do not click on the box :-)')
+  numOfExcercises.style.backgroundColor = 'lightblue'
+})
+
 submitButton.addEventListener("click", function () {
     let numberOfExcercises = numOfExcercises.value;
     PrintExcercises(vezbi, numberOfExcercises);
     numOfExcercises.value = "";
+    container.style.backgroundColor = 'salmon';
+    document.body.style.backgroundColor = 'orange'
+    container.style.color = 'white'
 });
-
 //FOR HOMEWORK!!!!!!!!!!!!
 //1.TRY Extending our application so it has a other HTML elements and logic in JS that will giv us just a given excercise(also handle errors if there is no such exercise in our object)
 
