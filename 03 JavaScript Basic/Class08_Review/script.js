@@ -65,4 +65,4 @@ submitButton.addEventListener("click", function () {
 
 // Remember to NOOOOOOOOOOTTTT use google or something similar, think for yourself and see references from our previous material and presentations!!!
 
-//HAPPY CODING!!!!!!!!!!!!
+//HAPPY CODING!!!!!!!!!!!!!
