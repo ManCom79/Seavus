@@ -1,0 +1,100 @@
+body {
+    background-color: #c1d72e;
+}
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+
+}
+
+#keyboard {
+    visibility: hidden;
+}
+
+.letterKey {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #c1d72e;
+    font-weight:250;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 35px;
+    height: 35px;
+    border: 1px #ffffff;
+    border-radius: 20%;
+    background-color: #ffffff;
+    font-size: 1.2em;
+}
+
+#gameName{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 3em;
+}
+
+#shortDescription{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 2em;
+}
+
+#selectModeButtons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#keyboardInstruction {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#categoryDiv {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+}
+
+td {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#lives {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#hintHolder {
+    display: flex;
+    justify-content: center;
+}
+
+#hintBox {
+    width: 400px;
+    height: 200px;
+    border-style: dashed;
+    border-width: 3px;
+    border-color: #ffffff;
+}
