@@ -39,6 +39,7 @@ body {
 
 #shortDescription{
     display: flex;
+    text-align: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
@@ -53,6 +54,7 @@ body {
 
 #keyboardInstruction {
     display: flex;
+    text-align: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
@@ -86,15 +88,64 @@ td {
     font-size: 1.5em;
 }
 
+#clue {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 2em;
+}
+
 #hintHolder {
     display: flex;
     justify-content: center;
 }
 
 #hintBox {
-    width: 400px;
+    width: 350px;
     height: 200px;
     border-style: dashed;
     border-width: 3px;
     border-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#hintAndPlayAgainButtonsHolder{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+#hintButton{
+    width: 200px;
+    height: 70px;
+    border: 3px black solid;
+    border-radius: 3%;
+    border-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#playAgainButton{
+    width: 200px;
+    height: 70px;
+    border: 3px black solid;
+    border-radius: 3%;
+    border-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
 }
