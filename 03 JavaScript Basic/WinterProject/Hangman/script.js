@@ -5,14 +5,12 @@ let categoryDiv = document.getElementById("categoryDiv");
 let livesCount = document.getElementById("lives");
 let hintButton = document.getElementById("hintButton")
 let playAgainButton = document.getElementById("playAgainButton")
-let usedLetters = [];
-let guessTitles = []; //will store the titles of the movies or tv shows, based on user's choice
-let result = "";
-let title = "";
-let lives = 10;
-let hints = []
-let category = "";
 let wordRow = document.getElementById("row");
+let usedLetters = []; //will store clicked letters
+let guessTitles = []; //will store the titles of the movies or tv shows, based on user's choice
+let lives = 10;
+let hints = [] //will store hints of selected show
+let category = "";
 let hintCounter = 0
 
 let movies = [
@@ -29,7 +27,7 @@ let movies = [
 let tvShows = [
   { title: "friends", hint1: "Unagi", hint2: "Chandler" },
   {
-    title: "two and a half man",
+    title: "two and a half men",
     hint1: "Charlie Sheen",
     hint2: "Ashton Kutcher",
   },
@@ -43,11 +41,9 @@ playMovies.addEventListener("click", function () {
   playMovies.style.visibility = "hidden";
   playTvshows.style.visibility = "hidden";
   keyboard.style.visibility = "visible";
-  console.log(movies.length);
   for (let i = 0; i < movies.length; i++) {
     guessTitles.push(movies[i].title);
   }
-  console.log(guessTitles);
   getWordToGuess();
 });
 
@@ -58,11 +54,9 @@ playTvshows.addEventListener("click", function () {
   playMovies.style.visibility = "hidden";
   playTvshows.style.visibility = "hidden";
   keyboard.style.visibility = "visible";
-  console.log(tvShows.length);
   for (let i = 0; i < tvShows.length; i++) {
     guessTitles.push(tvShows[i].title);
   }
-  console.log(guessTitles);
   getWordToGuess();
 });
 
