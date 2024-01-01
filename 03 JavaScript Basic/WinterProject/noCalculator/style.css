@@ -1,0 +1,53 @@
+#screen {
+    display: flex;
+    justify-content: center;
+}
+
+#mainFrame {
+    height: 600px;
+    width: 400px;
+    background-color: antiquewhite;
+}
+
+.grayButtons {
+    background-color: gray;
+}
+
+.orangeButtons {
+    background-color: orange;
+}
+
+.rowOfButtons {
+    display: flex;
+    gap: 2px   ;
+}
+
+/* #firstRowButtons{
+    display: flex;
+    gap: 2px   ;
+} */
+
+.regularButtonSize{
+    height: 100px;
+    width: 25%;
+}
+
+.doubleButtonSize {
+    height: 100px;
+    width: 50%;
+}
+
+/* #clear {
+    height: 100px;
+    width: 50%;
+}
+
+#backspace{
+    height: 100px;
+    width: 25%;
+}
+
+#divide {
+    height: 100px;
+    width: 25%;
+} */
