@@ -13,8 +13,15 @@
 }
 
 .display {
+    display: flex;
     width: 407px;
     height: 50px;
+    justify-content: right;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 10px;
 }
 
 .grayButton {
@@ -37,6 +44,11 @@
     font-size: 30px;
     font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.longButtonC {
+    width: 304px;
+    height: 100px;
 }
 
 .longButton{
