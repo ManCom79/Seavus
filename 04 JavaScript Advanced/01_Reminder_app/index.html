@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Reminder</title>
+</head>
+<body>
+    <div id="titleDiv">
+        <label for="title">Enter reminder: </label>
+        <input type="text" name="title" id="title">
+    </div>
+    <div id="colorDiv">
+        <label for="color">Please select color: </label>
+        <select name="color" id="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+    </div>
+    <div id="priorityDiv">
+        <label for="priority">Please select priority: </label>
+        <select name="priority" id="priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+    </div>
+    <div id="textAreaDiv">
+        <textarea name="textArea" id="textArea" cols="30" rows="10" placeholder="Add Description"></textarea>
+    </div>
+    <div id="buttonHolderDiv">
+        <button id="btnAddReminder">Add Reminder</button>
+        <button id="btnShowReminders">Show Reminders</button>
+    </div>
+    <div id="tableHolder"></div>
+    <script src="script.js"></script>
+</body>
+</html>

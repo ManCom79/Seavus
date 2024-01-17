@@ -1,0 +1,30 @@
+#titleDiv {
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#colorDiv {
+    height: 50px;
+    margin-left: 20px;
+}
+
+#priorityDiv {
+    height: 50px;
+    margin-left: 20px;
+}
+
+#textAreaDiv {
+    /* height: 50px; */
+    margin-left: 20px;
+}
+
+#buttonHolderDiv {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#tableHolder {
+    margin-top: 20px;
+    margin-left: 20px;
+}
