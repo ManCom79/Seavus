@@ -1,11 +1,11 @@
 //1. Function that takes a number through a parameter and returns how many digits that number has
 function countNumberOfDigits (number) {
     numberOfDigits = (number.toString()).length
-    if (number.toString()[0]){
+    if (number.toString()[0] === "-"){
         numberOfDigits = numberOfDigits - 1
         return numberOfDigits
     } else {
-    return numberOfDigits
+        return numberOfDigits
     }
 }
 
@@ -39,5 +39,5 @@ function numberPropertiesAnalysis (number) {
     return `${countNumberOfDigits(number)} digits, ${evenOrOdd(number)}, ${numberPositiveOrNegative(number)}`;
 }
 
-let response = numberPropertiesAnalysis(-1000)
+let response = numberPropertiesAnalysis(10101)
 console.log(response);
