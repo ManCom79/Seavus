@@ -3,13 +3,18 @@
 
 // NO HIGER ORDER FUNCTIONS!!!
 
-let string = "Hello World, I Love You a Lot!"
-// let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let stringHolder = document.getElementById("stringHolder")
+let submitString = document.getElementById("submitString")
 
-let vowels = ["a", "e", "i", "o", "u"]
+let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"] // not using toLowerCase on purpose
+
+submitString.addEventListener("click", function() {
+    countStringVowels(stringHolder.value)
+    stringHolder.value = ""
+})
 
 let countStringVowels = string => {
-    string = string.toLowerCase()
+    // string = string.toLowerCase() I HAVE COMMENTED THIS BECAUSE I WANT TO HANDLE UPPERCASE IN LINES 27, 29 and 31
     let numberOfVowels = 0
     for (let i = 0; i < string.length; i++) {
         for (let j = 0; j < vowels.length; j++) {
@@ -18,7 +23,12 @@ let countStringVowels = string => {
             }            
         }
     }
-    console.log(`There are ${numberOfVowels} vowels in the string "${string}".`);
+    let resultHolder = document.getElementById("resultHolder")
+    if (numberOfVowels === 0) {
+        resultHolder.innerText = `There are no vowels in "${string}".`
+    } else if (numberOfVowels === 1) {
+        resultHolder.innerText = `There is ${numberOfVowels} vowel in "${string}".`
+    } else {
+    resultHolder.innerText = `There are ${numberOfVowels} vowels in "${string}".`
+    }
 }
-
-countStringVowels(string)
