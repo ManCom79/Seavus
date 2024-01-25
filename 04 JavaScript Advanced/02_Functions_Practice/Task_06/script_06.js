@@ -6,6 +6,8 @@
 // Check if the number is a positive number and if true, store it in a filtered array with all positive numbers
 // Multiply all positive numbers
 
+// NO HIGH ORDER FUNCTIONS!!!
+
 let array = [-10, 5, 7894, NaN, 'Hello world', Infinity, false, [Object, Object], 25, name => `Hello ${name}`, -Infinity, ['hi', 28, -93, true], { name: 'Bob', age: 23, }, undefined, 14, null, 159, 0, -11];
 
 let positiveNumbersArray = []
