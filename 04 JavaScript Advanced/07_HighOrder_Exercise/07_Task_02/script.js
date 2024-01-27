@@ -26,7 +26,6 @@ let getLaptopsByPriceDescending = (data) => {
 let getFirstGroceryItem = data => {
     console.log("Task 2");
     let product = data.products
-    console.log(product);
     let firstGroceryItem = product.find(product => product.category === "groceries")
     console.log(`First grocery item is ${firstGroceryItem.brand}, that's ${firstGroceryItem.description}`)
 }
@@ -68,6 +67,24 @@ let getHighestRatedSkincarePorduct = data => {
 
 }
 
+//Task 2.6 The average discount percentage of products with a rating above 4.5
+let getAverageDiscountPercentage = data => {
+    console.log("Task 6");
+    let product = data.products
+    let discountsOfRatingsAboveThreshold = product.filter(items => items.rating > 4.5).map(discounts => discounts.rating)
+    let average = (discountsOfRatingsAboveThreshold.reduce((sum, curr) => sum + curr, 0) / discountsOfRatingsAboveThreshold.length)
+    console.log(`The average discount percentage of products with rating above 4.5 is ${average}.`);
+}
+
+//Task 2.7 Find the product with the highest price
+let getProductWithHighestPrice = data => {
+    console.log("Task 7");
+    let product = data.products
+    let highestPriceProduct = (product.map(item => {return [item.price, item.brand, item.category]})).sort((a, b) => {return b[0] - a[0]})
+    console.log(`The products with the highest price are ${highestPriceProduct[0][1]} ${highestPriceProduct[0][2]} with price tag of ${highestPriceProduct[0][0]}.`);
+}
+
+
 function getData() {
     fetch("https://dummyjson.com/products")
     .then(
@@ -79,6 +96,8 @@ function getData() {
         getFirstSamsungIndex(data)
         checkIfSonlyIncluded(data)
         getHighestRatedSkincarePorduct(data)
+        getAverageDiscountPercentage(data)
+        getProductWithHighestPrice(data)
     }
     );
 }
