@@ -59,6 +59,15 @@ let checkIfSonlyIncluded = data => {
     };
 }
 
+//Task 2.5
+let getHighestRatedSkincarePorduct = data => {
+    console.log("Task 5");
+    let product = data.products
+    let skinCarePorducts = product.filter(skinCarePorduct => skinCarePorduct.category === "skincare").find(skinProductsInfo => Math.max(skinProductsInfo.rating))
+    console.log(`Skincare produc with highest rating is ${skinCarePorducts.title} from ${skinCarePorducts.brand} with rating value ${skinCarePorducts.rating}.`);
+
+}
+
 function getData() {
     fetch("https://dummyjson.com/products")
     .then(
@@ -69,6 +78,7 @@ function getData() {
         getFirstGroceryItem(data);
         getFirstSamsungIndex(data)
         checkIfSonlyIncluded(data)
+        getHighestRatedSkincarePorduct(data)
     }
     );
 }
