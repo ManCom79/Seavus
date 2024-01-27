@@ -93,20 +93,30 @@ let getAveragePriceOfIphone = data => {
     console.log(`Average price of an iPhone is ${averageIphonePrice}.`);
 }
 
+//Task 2.9 The product with the lowest price
+let getProductWithLowerstPrice = data => {
+    console.log("Task 2.9");
+    let product = data.products
+    let prices = product.filter(item => item.price).map(item => {return [item.price, item.brand, item.category]}).sort((a, b) => a[0] - b[0])
+    console.log(`The cheapest product in the list is ${prices[0][1]} ${prices[0][2]} product with price tag of ${prices[0][0]}.`);
+}
+
+
 function getData() {
     fetch("https://dummyjson.com/products")
     .then(
         (response) => response.json()
     )
     .then (data => {
-        getLaptopsByPriceDescending(data);
-        getFirstGroceryItem(data);
+        getLaptopsByPriceDescending(data)
+        getFirstGroceryItem(data)
         getFirstSamsungIndex(data)
         checkIfSonlyIncluded(data)
         getHighestRatedSkincarePorduct(data)
         getAverageDiscountPercentage(data)
         getProductWithHighestPrice(data)
         getAveragePriceOfIphone(data)
+        getProductWithLowerstPrice(data)
     }
     );
 }
