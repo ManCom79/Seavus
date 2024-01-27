@@ -18,12 +18,23 @@ let getAllDeserts = data => {
     console.log(`Deserts are ${deserts}.`);
 }
 
+//Task 3.2 Get the names of recipes with more than 30 reviews
+let getRecipiesWithMoreTham30Reviews = data => {
+    console.log("Task 2");
+    let allRecipes = data.recipes
+    console.log(allRecipes);
+    let revireMoreThan30 = allRecipes.filter(recipe => recipe.reviewCount > 30).map(recipe => recipe.name)
+    console.log(`Recipies with more than 30 reviews are ${revireMoreThan30}`);
+}
+
+
 
 let getData = () => {
     fetch("https://dummyjson.com/recipes")
     .then(response => response.json())
     .then(data => {
         getAllDeserts(data)
+        getRecipiesWithMoreTham30Reviews(data)
     }
     )
 }
