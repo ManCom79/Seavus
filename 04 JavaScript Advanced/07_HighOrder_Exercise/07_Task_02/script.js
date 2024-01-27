@@ -84,6 +84,14 @@ let getProductWithHighestPrice = data => {
     console.log(`The products with the highest price are ${highestPriceProduct[0][1]} ${highestPriceProduct[0][2]} with price tag of ${highestPriceProduct[0][0]}.`);
 }
 
+//Task 2.8 Average price of all IPhone smartphones
+let getAveragePriceOfIphone = data => {
+    console.log("Task 8");
+    let product = data.products
+    let iPhonePirces = product.filter(iPhones => iPhones.category === "smartphones" && iPhones.brand === "Apple").map(price => price.price)
+    let averageIphonePrice = (iPhonePirces.reduce((sum, curr) => sum + curr, 0)) / iPhonePirces.length
+    console.log(`Average price of an iPhone is ${averageIphonePrice}.`);
+}
 
 function getData() {
     fetch("https://dummyjson.com/products")
@@ -98,6 +106,7 @@ function getData() {
         getHighestRatedSkincarePorduct(data)
         getAverageDiscountPercentage(data)
         getProductWithHighestPrice(data)
+        getAveragePriceOfIphone(data)
     }
     );
 }
