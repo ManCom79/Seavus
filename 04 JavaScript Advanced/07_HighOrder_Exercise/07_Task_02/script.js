@@ -32,15 +32,32 @@ let getFirstGroceryItem = data => {
 }
 
 //Task 2.3
+// let getFirstSamsungIndex = data => {
+//     console.log("Task 3");
+//     let product = data.products
+//     // let firstSamsungIndex = 
+//     let index = product.indexOf(product.find(product => product.brand === "Samsung" && product.category === "smartphones"))
+//     console.log(`Index of the first Samsung smartphone is ${index}.`);
+// }
+
 let getFirstSamsungIndex = data => {
     console.log("Task 3");
     let product = data.products
-    // let firstSamsungIndex = 
-    let index = product.indexOf(product.find(product => product.brand === "Samsung" && product.category === "smartphones"))
-    console.log(`Index of the first Samsung smartphone is ${index}.`);
-
+    let allBrandsArray = product.findIndex(samsung => samsung.brand === "Samsung" && samsung.category === "smartphones")
+    console.log(`Index of the first Samsung smartphone is ${allBrandsArray}.`);
 }
 
+//Task 2.4
+let checkIfSonlyIncluded = data => {
+    console.log("Task 4");
+    let product = data.products
+    let checkSonyPresence = product.includes(product => product.brand === "Sony")
+    if(!checkSonyPresence){
+        console.log('There are no items of brand "Sony"')
+    } else {
+        console.log(`There is item of brand "Sony".`)
+    };
+}
 
 function getData() {
     fetch("https://dummyjson.com/products")
@@ -51,6 +68,7 @@ function getData() {
         getLaptopsByPriceDescending(data);
         getFirstGroceryItem(data);
         getFirstSamsungIndex(data)
+        checkIfSonlyIncluded(data)
     }
     );
 }
