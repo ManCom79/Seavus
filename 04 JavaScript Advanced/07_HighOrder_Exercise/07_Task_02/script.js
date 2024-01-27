@@ -12,7 +12,7 @@
 
 // Link: https://dummyjson.com/products
 
-//Task 2.1
+//Task 2.1 All laptops, ordered by price descending
 let getLaptopsByPriceDescending = (data) => {
     console.log("Task 1");
     let products = data.products
@@ -22,7 +22,7 @@ let getLaptopsByPriceDescending = (data) => {
 
 }
 
-//Task 2.2
+//Task 2.2 The first grocery item
 let getFirstGroceryItem = data => {
     console.log("Task 2");
     let product = data.products
@@ -30,7 +30,7 @@ let getFirstGroceryItem = data => {
     console.log(`First grocery item is ${firstGroceryItem.brand}, that's ${firstGroceryItem.description}`)
 }
 
-//Task 2.3
+//Task 2.3 Index of the first "Samsung" smartphone
 // let getFirstSamsungIndex = data => {
 //     console.log("Task 3");
 //     let product = data.products
@@ -46,7 +46,7 @@ let getFirstSamsungIndex = data => {
     console.log(`Index of the first Samsung smartphone is ${allBrandsArray}.`);
 }
 
-//Task 2.4
+//Task 2.4 Check if there is any item from the brand "Sony"
 let checkIfSonlyIncluded = data => {
     console.log("Task 4");
     let product = data.products
@@ -58,7 +58,7 @@ let checkIfSonlyIncluded = data => {
     };
 }
 
-//Task 2.5
+//Task 2.5 The name of the highest rated skincare product
 let getHighestRatedSkincarePorduct = data => {
     console.log("Task 5");
     let product = data.products
