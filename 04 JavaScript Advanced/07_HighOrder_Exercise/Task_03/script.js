@@ -22,11 +22,18 @@ let getAllDeserts = data => {
 let getRecipiesWithMoreTham30Reviews = data => {
     console.log("Task 2");
     let allRecipes = data.recipes
-    console.log(allRecipes);
     let revireMoreThan30 = allRecipes.filter(recipe => recipe.reviewCount > 30).map(recipe => recipe.name)
     console.log(`Recipies with more than 30 reviews are ${revireMoreThan30}`);
 }
 
+//Task 3.3 Recipes that are served as both Lunch and Dinner
+let getLunchAndDinnerRecipes = data => {
+    console.log("Task 3");
+    let allRecipes = data.recipes
+    console.log(allRecipes);
+    let lunchAndDinner = allRecipes.filter(rec => rec.mealType.includes("Lunch") && rec.mealType.includes("Dinner")).map(rec => rec.name)
+    console.log(`For Lunch and Dinner you can have: ${lunchAndDinner}.`);
+}
 
 
 let getData = () => {
@@ -35,6 +42,7 @@ let getData = () => {
     .then(data => {
         getAllDeserts(data)
         getRecipiesWithMoreTham30Reviews(data)
+        getLunchAndDinnerRecipes(data)
     }
     )
 }
