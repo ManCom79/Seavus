@@ -46,6 +46,7 @@ let getIngredientsForMangoSalsaChicken = data => {
 let getAvgCaloriesInAmericanFood = data => {
     console.log("Task 6");
     let allRecipes = data.recipes
+    console.log(allRecipes);
     let allAmericanRecipes = allRecipes.filter(rec => rec.cuisine === 'American').map(rec => rec.caloriesPerServing)
     let totalCaloriesInAmericanRecipes = allAmericanRecipes.reduce((sum, curr) => sum + curr, 0)
     let averageCaloriesInAmericanRecepies = (totalCaloriesInAmericanRecipes) / allAmericanRecipes.length
@@ -62,6 +63,13 @@ let getAvgPastCookingTime = data => {
 }
 
 //Task 3.8 Find the recipe with the lowest number of reviews
+let getLowestReviewRecipe = data => {
+    console.log("Task 8");
+    let allRecipes = data.recipes
+    let reviews = allRecipes.map(rec => [rec.reviewCount, rec.name]).sort((a, b) => a[0] - b[0])[0]
+    console.log(`${reviews[1]} has only ${reviews[0]} reviews.`);
+}
+
 
 let getData = () => {
     fetch("https://dummyjson.com/recipes")
@@ -73,6 +81,7 @@ let getData = () => {
         getIngredientsForMangoSalsaChicken(data)
         getAvgCaloriesInAmericanFood(data)
         getAvgPastCookingTime(data)
+        getLowestReviewRecipe(data)
     }
     )
 }
