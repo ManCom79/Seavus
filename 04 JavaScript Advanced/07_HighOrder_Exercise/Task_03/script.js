@@ -26,6 +26,13 @@ let getRecipiesWithMoreTham30Reviews = data => {
     console.log(`Recipies with more than 30 reviews are ${revireMoreThan30}`);
 }
 
+//Task 3.3 All recipes that use Cinnamon as an ingredient
+let getRecipesWithCinamon = data => {
+    console.log("Task 3");
+    let allRecipes = data.recipes.filter(rec => rec.ingredients.includes('Cinnamon')).map(rec => rec.name)
+    console.log(`Recipes that include Cinnamon are: ${allRecipes}`);
+}
+
 //Task 3.4 Recipes that are served as both Lunch and Dinner
 let getLunchAndDinnerRecipes = data => {
     console.log("Task 4");
@@ -77,6 +84,7 @@ let getData = () => {
     .then(data => {
         getAllDeserts(data)
         getRecipiesWithMoreTham30Reviews(data)
+        getRecipesWithCinamon(data)
         getLunchAndDinnerRecipes(data)
         getIngredientsForMangoSalsaChicken(data)
         getAvgCaloriesInAmericanFood(data)
