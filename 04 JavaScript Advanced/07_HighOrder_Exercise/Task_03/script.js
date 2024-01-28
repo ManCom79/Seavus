@@ -46,13 +46,22 @@ let getIngredientsForMangoSalsaChicken = data => {
 let getAvgCaloriesInAmericanFood = data => {
     console.log("Task 6");
     let allRecipes = data.recipes
-    console.log(allRecipes);
     let allAmericanRecipes = allRecipes.filter(rec => rec.cuisine === 'American').map(rec => rec.caloriesPerServing)
     let totalCaloriesInAmericanRecipes = allAmericanRecipes.reduce((sum, curr) => sum + curr, 0)
     let averageCaloriesInAmericanRecepies = (totalCaloriesInAmericanRecipes) / allAmericanRecipes.length
     console.log(`Average calories in American recipes: ${averageCaloriesInAmericanRecepies} calories.`);
 }
 
+//Task 3.7 The average cooking time of all pasta recipes
+let getAvgPastCookingTime = data => {
+    console.log("Task 7");
+    let allPastaRecipes = data.recipes.filter(rec => rec.tags.includes('Pasta'))
+    let pastaCookingTime = allPastaRecipes.map(rec => rec.cookTimeMinutes)
+    let avgPastaCookingTime = pastaCookingTime.reduce((sum, curr) => sum + curr, 0) / pastaCookingTime.length
+    console.log(`Average pasta cooking time is ${avgPastaCookingTime} minutes.`);
+}
+
+//Task 3.8 Find the recipe with the lowest number of reviews
 
 let getData = () => {
     fetch("https://dummyjson.com/recipes")
@@ -63,6 +72,7 @@ let getData = () => {
         getLunchAndDinnerRecipes(data)
         getIngredientsForMangoSalsaChicken(data)
         getAvgCaloriesInAmericanFood(data)
+        getAvgPastCookingTime(data)
     }
     )
 }
