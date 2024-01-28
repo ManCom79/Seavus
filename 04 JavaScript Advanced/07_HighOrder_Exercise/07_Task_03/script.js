@@ -53,7 +53,6 @@ let getIngredientsForMangoSalsaChicken = data => {
 let getAvgCaloriesInAmericanFood = data => {
     console.log("Task 6");
     let allRecipes = data.recipes
-    console.log(allRecipes);
     let allAmericanRecipes = allRecipes.filter(rec => rec.cuisine === 'American').map(rec => rec.caloriesPerServing)
     let totalCaloriesInAmericanRecipes = allAmericanRecipes.reduce((sum, curr) => sum + curr, 0)
     let averageCaloriesInAmericanRecepies = (totalCaloriesInAmericanRecipes) / allAmericanRecipes.length
