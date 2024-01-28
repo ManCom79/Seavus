@@ -38,10 +38,21 @@ let getLunchAndDinnerRecipes = data => {
 let getIngredientsForMangoSalsaChicken = data => {
     console.log("Task 5");
     let allRecipes = data.recipes
-    console.log(allRecipes);
     let mangoSalsaChickenIngredients = allRecipes.filter(rec => rec.name === 'Mango Salsa Chicken').map(rec => rec.ingredients)
     console.log(`To make "Mango Salsa Chicken" you need: ${mangoSalsaChickenIngredients}.`);
 }
+
+//Task 3.6 Calculate the average number of calories for all American cusine recipes
+let getAvgCaloriesInAmericanFood = data => {
+    console.log("Task 6");
+    let allRecipes = data.recipes
+    console.log(allRecipes);
+    let allAmericanRecipes = allRecipes.filter(rec => rec.cuisine === 'American').map(rec => rec.caloriesPerServing)
+    let totalCaloriesInAmericanRecipes = allAmericanRecipes.reduce((sum, curr) => sum + curr, 0)
+    let averageCaloriesInAmericanRecepies = (totalCaloriesInAmericanRecipes) / allAmericanRecipes.length
+    console.log(`Average calories in American recipes: ${averageCaloriesInAmericanRecepies} calories.`);
+}
+
 
 let getData = () => {
     fetch("https://dummyjson.com/recipes")
@@ -51,6 +62,7 @@ let getData = () => {
         getRecipiesWithMoreTham30Reviews(data)
         getLunchAndDinnerRecipes(data)
         getIngredientsForMangoSalsaChicken(data)
+        getAvgCaloriesInAmericanFood(data)
     }
     )
 }
