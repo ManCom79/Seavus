@@ -26,15 +26,22 @@ let getRecipiesWithMoreTham30Reviews = data => {
     console.log(`Recipies with more than 30 reviews are ${revireMoreThan30}`);
 }
 
-//Task 3.3 Recipes that are served as both Lunch and Dinner
+//Task 3.4 Recipes that are served as both Lunch and Dinner
 let getLunchAndDinnerRecipes = data => {
-    console.log("Task 3");
+    console.log("Task 4");
     let allRecipes = data.recipes
-    console.log(allRecipes);
     let lunchAndDinner = allRecipes.filter(rec => rec.mealType.includes("Lunch") && rec.mealType.includes("Dinner")).map(rec => rec.name)
     console.log(`For Lunch and Dinner you can have: ${lunchAndDinner}.`);
 }
 
+//Task 3.5 The ingredients needed for "Mango Salsa Chicken" dish
+let getIngredientsForMangoSalsaChicken = data => {
+    console.log("Task 5");
+    let allRecipes = data.recipes
+    console.log(allRecipes);
+    let mangoSalsaChickenIngredients = allRecipes.filter(rec => rec.name === 'Mango Salsa Chicken').map(rec => rec.ingredients)
+    console.log(`To make "Mango Salsa Chicken" you need: ${mangoSalsaChickenIngredients}.`);
+}
 
 let getData = () => {
     fetch("https://dummyjson.com/recipes")
@@ -43,6 +50,7 @@ let getData = () => {
         getAllDeserts(data)
         getRecipiesWithMoreTham30Reviews(data)
         getLunchAndDinnerRecipes(data)
+        getIngredientsForMangoSalsaChicken(data)
     }
     )
 }
