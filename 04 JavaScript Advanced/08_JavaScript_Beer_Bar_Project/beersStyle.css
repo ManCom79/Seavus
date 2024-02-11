@@ -1,0 +1,61 @@
+#dropDownHolder {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+#dropDowns {
+    display: flex;
+    justify-content: space-around;
+}
+
+#paginationCount {
+    margin: 20px;
+}
+
+#cardsHolder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75rem;
+    margin: auto;
+}
+
+#beerCard {
+    padding-top: 10px;
+}
+
+#cardImage {
+    height: 150px;
+    width: fit-content
+}
+
+#cardTitle {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+}
+
+#cardDescription {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+#paginationButtonsHolder {
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#btnPrevious {
+    visibility: hidden;
+}
+
+#btnNext {
+    visibility: hidden;
+}
