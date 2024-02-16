@@ -11,18 +11,14 @@ function evaluateExpression() {
   if (calculationsContainer[1] === "+") {
     result = calculationsContainer[0] + calculationsContainer[2];
     console.log(`Result is ${result}`);
-    calculationsContainer.shift();
-    calculationsContainer.shift();
-    calculationsContainer.shift();
+    calculationsContainer = []
     calculationsContainer.unshift(result);
     lowerScreen.innerText = result;
     upperScreen.innerText = `${result} `;
   } else if (calculationsContainer[1] === "-") {
     result = calculationsContainer[0] - calculationsContainer[2];
     console.log(`Result is ${result}`);
-    calculationsContainer.shift();
-    calculationsContainer.shift();
-    calculationsContainer.shift();
+    calculationsContainer = []
     calculationsContainer.unshift(result);
     lowerScreen.innerText = result;
     upperScreen.innerText = `${result} `;
@@ -32,9 +28,7 @@ function evaluateExpression() {
     } else {
         result = calculationsContainer[0] / calculationsContainer[2];
         console.log(`Result is ${result}`);
-        calculationsContainer.shift();
-        calculationsContainer.shift();
-        calculationsContainer.shift();
+        calculationsContainer = []
         calculationsContainer.unshift(result);
         lowerScreen.innerText = result;
         upperScreen.innerText = `${result} ÷`;
@@ -42,9 +36,7 @@ function evaluateExpression() {
   } else if (calculationsContainer[1] === "×") {
     result = calculationsContainer[0] * calculationsContainer[2];
     console.log(`Result is ${result}`);
-    calculationsContainer.shift();
-    calculationsContainer.shift();
-    calculationsContainer.shift();
+    calculationsContainer = []
     calculationsContainer.unshift(result);
     upperScreen.innerText = `${result} ×`;
     lowerScreen.innerText = result;
@@ -68,7 +60,7 @@ listenInput = addEventListener("click", function (event) {
     }
   }
 
-  //listen clicks on operations
+  //listen clicks on operations buttons
   if (event.target.className.includes("operation")) {
     if (number === "") {
       console.log("No number in number");
@@ -87,7 +79,7 @@ listenInput = addEventListener("click", function (event) {
     }
   }
 
-  //equal button
+  //when equal button is pressed
   if (event.target.className.includes("equal")) {
     if (number === "") {
     } else {
@@ -95,13 +87,14 @@ listenInput = addEventListener("click", function (event) {
       number = "";
       userNumberInput = "";
       evaluateExpression();
-      upperScreen.innerText = "";
+      upperScreen.innerText = `${result}`; //changed from ""--------------------------------
+      number = result // added as whole
       console.log("Equal is", result);
       calculationsContainer = [];
     }
   }
 
-  //clear screen button
+  //when clear screen button is pressed
   if (event.target.className.includes("clear")) {
     result = null;
     number = "";
